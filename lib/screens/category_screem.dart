@@ -12,8 +12,9 @@ class CategoryScreem extends StatelessWidget {
         title: Text('Vamos cozinhar!'),
       ),
       body: GridView(
+        padding: const EdgeInsets.all(25),
         //uma area que tem scroll
-        gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+        gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
           maxCrossAxisExtent: 200,
           childAspectRatio: 3/2,//proporção de cada elemento no gridview
           crossAxisSpacing: 20,//espaçamento no eixo cruzado
