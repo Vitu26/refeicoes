@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../components/category_item.dart';
 import '../data/dummy_data.dart';
 
+
 class CategoryScreem extends StatelessWidget {
   const CategoryScreem({super.key});
 
