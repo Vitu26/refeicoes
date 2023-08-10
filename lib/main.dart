@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:refeicoes/screens/meal_detail_screem.dart';
 import 'screens/category_screem.dart';
 import 'screens/category_meals_screem.dart';
 import 'utils/app_routes.dart';
@@ -11,6 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Vamos cozinhar!',
       theme: ThemeData(
         primarySwatch: Colors.pink,
@@ -29,8 +31,27 @@ class MyApp extends StatelessWidget {
       //rotas nomeadas
       routes: {
         AppRoutes.HOME: (ctx) => CategoryScreem(),
-        AppRoutes.CATEGORIES_MEALS:(ctx) => CategorysMealsScrem(),
+        AppRoutes.CATEGORIES_MEALS: (ctx) => CategorysMealsScrem(),
+        AppRoutes.MEALS_DETAILS: (ctx) => MealDetailScreen()
       },
+      //metodo para criar rotas dinamicas
+      // onGenerateRoute: (settings){
+      //   if(settings.name == '/alguma-coisa'){
+      //     return null;
+      //   }else if(settings.name == '/outra-coisa'){
+      //     return null;
+      //   }else{
+      //     return MaterialPageRoute(builder: (_){return CategoryScreem();});
+      //   }
+      // },
+      // //metodo para quando a rota não é encontrada
+      // onUnknownRoute: (settigs) {
+      //   return MaterialPageRoute(
+      //     builder: (_){
+      //       return CategoryScreem();
+      //     }
+      //   );
+      // },
     );
   }
 }

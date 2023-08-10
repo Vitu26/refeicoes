@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:refeicoes/models/meal.dart';
 import '../models/category.dart';
 import '../data/dummy_data.dart';
 import '../components/meal_item.dart';
